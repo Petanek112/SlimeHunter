@@ -1,0 +1,24 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Materials/Particles/Effects/Effect.gd" type="Script" id=1]
+[ext_resource path="res://Materials/Slimes/BOOM/Blue/pixil-frame-5.png" type="Texture" id=2]
+[ext_resource path="res://Materials/Slimes/BOOM/Blue/pixil-frame-3 (10).png" type="Texture" id=3]
+[ext_resource path="res://Materials/Slimes/BOOM/Blue/pixil-frame-0 (26).png" type="Texture" id=4]
+[ext_resource path="res://Materials/Slimes/BOOM/Blue/pixil-frame-2 (11).png" type="Texture" id=5]
+[ext_resource path="res://Materials/Slimes/BOOM/Blue/pixil-frame-6.png" type="Texture" id=6]
+[ext_resource path="res://Materials/Slimes/BOOM/Blue/pixil-frame-4 (1).png" type="Texture" id=7]
+[ext_resource path="res://Materials/Slimes/BOOM/Blue/pixil-frame-1 (15).png" type="Texture" id=8]
+[ext_resource path="res://Materials/Slimes/BOOM/Blue/pixil-frame-7.png" type="Texture" id=9]
+
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 15.0
+} ]
+
+[node name="AnimatedSprite" type="AnimatedSprite"]
+frames = SubResource( 1 )
+script = ExtResource( 1 )

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Materials/Slimes/PlayerDetectionZone.gd" type="Script" id=1]
+
+[node name="Start_PlayerDetectionZone" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+build_mode = 1
+polygon = PoolVector2Array( -1029.94, 1949.65, -2.65295, 1959.97, 518.732, 1526.35, 756.195, 1257.91, 1055.6, 922.366, 1153.69, 731.364, 1360.18, 591.984, 1551.18, 416.468, 1742.18, 318.385, 1757.67, 117.058, 1783.48, -182.351, 1773.15, -399.165, 1747.34, -590.167, 1385.99, -750.196, 178.025, -822.467, -446.605, -776.007, -1050.59, -476.598, -1117.69, 349.359, -988.639, 1263.07, -988.639, 1748.32 )
+[connection signal="body_entered" from="." to="." method="_on_PlayerDetectionZone_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_PlayerDetectionZone_body_exited"]

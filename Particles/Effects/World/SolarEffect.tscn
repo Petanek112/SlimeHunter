@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Materials/Particles/Effects/World/WorldEffect.gd" type="Script" id=1]
+
+[sub_resource type="ParticlesMaterial" id=1]
+emission_shape = 2
+emission_box_extents = Vector3( 180, 160, 1 )
+flag_disable_z = true
+direction = Vector3( 0, 40, 0 )
+spread = 180.0
+gravity = Vector3( 0, -2, 0 )
+initial_velocity = 10.0
+initial_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+color = Color( 0.811765, 0.439216, 0.0313726, 1 )
+
+[node name="SolarEffect" type="Node2D"]
+z_index = 2
+script = ExtResource( 1 )
+Solar = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color( 0.392157, 0.164706, 0.101961, 0.0784314 )
+margin_right = 320.0
+margin_bottom = 180.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( 160, 90 )
+amount = 9
+lifetime = 4.0
+randomness = 1.0
+local_coords = false
+process_material = SubResource( 1 )
